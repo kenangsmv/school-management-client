@@ -1,0 +1,19 @@
+.searchbox {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    width: 30%;
+    border: 1px solid #D1E49C;
+
+
+    input {
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        background: none;
+        width: 100%;
+
+    }
+}

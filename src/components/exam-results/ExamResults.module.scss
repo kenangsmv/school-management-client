@@ -1,0 +1,75 @@
+.list-container {
+    overflow-y: scroll;
+    background: #FFFFFF;
+    padding: 0 1em 1em 1em;
+    border-radius: 15px;
+    margin-top: 2em;
+
+    .list-table {
+        width: 100%;
+        border-collapse: collapse;
+        max-height: fit-content;
+
+        thead {}
+
+        th {
+            text-align: start;
+            width: 20%;
+            padding: 15px;
+
+        }
+
+        th:nth-child(2) {
+            width: 40%;
+        }
+
+        td {
+            padding: 5px 15px;
+
+        }
+
+        tbody {
+            tr {
+                transition: 0.3s all;
+                color: #838F9F;
+
+            }
+
+            tr:nth-child(odd) {
+                background: #F1F9F6;
+                transition: 0.3s all;
+            }
+
+            tr:hover {
+                background: #47D086;
+                color: white;
+                transition: 0.3s all;
+            }
+        }
+
+
+        .list-exam-name {
+            display: flex;
+            align-items: center;
+
+
+        }
+
+    }
+}
+
+.list-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,105 @@
+.database-list-container {
+    display: flex;
+    height: 100%;
+
+    .list-box {
+        width: 75%;
+        padding: 1em;
+    }
+
+    h1 {
+        padding: 1em 0;
+    }
+
+    .user-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        border-bottom: 1px solid #0000001a;
+
+        li {
+            padding: 10px;
+            font-weight: bold;
+            color: #838F9F;
+        }
+    }
+
+    .list-container {
+        overflow-y: scroll;
+        height: 80%;
+
+        .list-table {
+            width: 100%;
+            border-collapse: collapse;
+            max-height: fit-content;
+
+            thead {}
+
+            th {
+                text-align: start;
+                width: 20%;
+                padding: 15px;
+
+            }
+
+            th:nth-child(1) {
+                width: 40%;
+            }
+
+            td {
+                padding: 5px 15px;
+
+            }
+
+            tbody {
+                tr {
+                    transition: 0.3s all;
+                    color: #838F9F;
+
+                }
+
+                tr:nth-child(odd) {
+                    background: #F1F9F6;
+                    transition: 0.3s all;
+                }
+
+                tr:hover {
+                    background: #47D086;
+                    color: white;
+                    transition: 0.3s all;
+                }
+            }
+
+
+            .list-user-name {
+                display: flex;
+                align-items: center;
+
+                .list-user-img {
+                    width: 40px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+            }
+
+        }
+    }
+
+
+}
+
+.list-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+.list-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -1,0 +1,86 @@
+.register {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+
+    form {
+        padding: 2em;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        width: 50%;
+
+        .selection {
+            display: flex;
+            width: 48%;
+
+            label {
+                width: 48%
+            }
+        }
+
+        select {
+            border: none;
+            outline: none;
+            background: #DDDDDD;
+            border-radius: 10px;
+            height: 45px;
+            width: 100%;
+            padding: 0 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+        }
+
+        label {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 0;
+
+            span {
+                padding-bottom: 4px;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                background: #DDDDDD;
+                border-radius: 10px;
+                height: 45px;
+                width: 100%;
+                padding: 0 10px;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+
+            }
+        }
+
+        .register-button {
+            border: none;
+            outline: none;
+            font-size: 1.5em;
+            color: white;
+            background: #3D9970;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+            cursor: pointer;
+            margin-top: 1em;
+            transition: 0.3s all;
+
+        }
+
+        .register-button:hover {
+            scale: 0.95;
+            transition: 0.3s all;
+        }
+    }
+
+    .register-side {
+        width: 50%;
+    }
+}

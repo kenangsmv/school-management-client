@@ -1,0 +1,151 @@
+.student-dashboard-container {
+    height: 100%;
+    padding: 2em;
+    background: #F1F9F6;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .dashboard-context {
+        overflow-y: scroll;
+        height: 98%;
+    }
+
+    .dashboard-context::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    .dashboard-main {
+        padding-right: 2em;
+        width: 80%;
+        height: 100%;
+
+
+
+        .news {
+            margin: 2em 0;
+            border-radius: 15px;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-around;
+            padding: 4em;
+            color: #FFFFFF;
+
+            .read-more {
+                background: #7FA30A;
+                color: #FFFFFF;
+                padding: 10px 20px;
+                font-size: 15px;
+                border: none;
+                outline: none;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .student-dashboard-actions {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 10px;
+                padding: 10px;
+                border-radius: 20px;
+
+                transition: 0.3s all;
+            }
+
+            li:hover {
+                background: #7FA30A;
+                color: white;
+                cursor: pointer;
+                border-radius: 20px;
+                transition: 0.3s all;
+
+            }
+        }
+    }
+
+    .student-dashboard-info {
+        background: #FFFFFF;
+        padding: 2em 1em;
+        border-radius: 15px;
+        width: 20%;
+        text-align: center;
+
+        .profile {
+
+            img {
+                width: 80px;
+                border-radius: 50%;
+            }
+
+            span {
+                color: #838F9F;
+
+            }
+        }
+
+        .dashboard-calendar {
+            display: flex;
+            justify-content: space-between;
+            padding: 2em 0;
+
+            p {
+                font-size: 14px;
+                text-align: center;
+                padding: 14px 10px;
+                margin-right: 10px;
+                background: #F6F8FA;
+                border-radius: 20px;
+                color: #838F9F;
+
+            }
+
+            p:last-child {
+                margin-right: 0;
+            }
+
+            .today {
+                background: #7FA30A;
+                color: white;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            }
+        }
+
+        .latest-exams {
+            text-align: start;
+
+            .exams {
+                background: #F1F9F6;
+                padding: 1em;
+                display: flex;
+                align-items: center;
+                border-radius: 15px;
+                margin-top: 10px;
+
+
+                span {
+                    padding: 15px 20px;
+                    border-radius: 50%;
+                    background: orange;
+                    color: #FFFFFF;
+                }
+
+                .exam-content {
+                    margin: 0 5.2em 0 1em;
+
+                    p {
+                        color: #838F9F;
+
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}

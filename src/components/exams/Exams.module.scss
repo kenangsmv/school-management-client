@@ -1,0 +1,81 @@
+.exams {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .exam {
+        position: relative;
+        width: 24%;
+        padding: 1em;
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin: 15px 0;
+        border: 1px solid #D1E49C;
+
+        .join-exam {
+            // position: absolute;
+            // bottom: 10px;
+            // right: 10px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 15px;
+            color: white;
+            background: #7FA30A;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            transition: 0.3s all;
+
+        }
+
+        .join-exam:hover {
+            scale: 0.95;
+            transition: 0.3s all;
+        }
+
+        h4 {
+            padding: 10px 0;
+        }
+
+        .exam-img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .exam-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-left: 10px;
+                    background: #F1F9F6;
+                    padding: 3px 10px;
+                    border-radius: 15px;
+                }
+
+            }
+
+            p,
+            span {
+                color: #838F9F;
+            }
+
+            span {
+                font-size: 12px;
+
+
+            }
+
+            .exam-teacher-img {
+                width: 25px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+    }
+}
