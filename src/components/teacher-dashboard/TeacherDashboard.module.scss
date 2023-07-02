@@ -1,0 +1,38 @@
+.teacher-dashboard {
+    background: #F1F9F6;
+    width: 85%;
+    padding: 2em;
+
+    .courses {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 2em 0;
+
+        .course {
+            width: 32%;
+            padding: 1em;
+            background: #FFFFFF;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 1px solid #D1E49C;
+            cursor: pointer;
+            transition: 0.3s all;
+
+            h4 {
+                padding: 10px 0;
+            }
+
+            .course-img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+        }
+
+        .course:hover {
+            scale: 1.02;
+            transition: 0.3s all;
+        }
+    }
+}

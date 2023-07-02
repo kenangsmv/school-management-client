@@ -1,8 +1,15 @@
-.navbar{
+.navbar {
     background: #3D9970;
+    position: fixed;
+    top: 0;
     height: 10%;
     width: 100%;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 33px;
+
 
 }

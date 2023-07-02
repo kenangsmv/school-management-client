@@ -1,0 +1,70 @@
+.course-selection {
+    width: 80%;
+    margin-left: auto;
+    padding: 2em;
+
+
+    .course-box-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(200px, auto));
+        gap: 20px;
+
+
+        .course-box {
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+
+            .create-exam {
+                border: none;
+                outline: none;
+                font-size: 1.5em;
+                color: white;
+                background: #3D9970;
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-top: 1em;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+                transition: 0.3s all;
+
+            }
+
+            .create-exam:hover {
+                scale: 0.95;
+                transition: 0.3s all;
+            }
+
+            .exam-form {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                background: white;
+                top: 110%;
+                height: 0;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+                padding: 0;
+                overflow: hidden;
+                transition: 0.3s all;
+
+            }
+
+            .exam-form-active {
+                height: auto;
+                padding: 1em;
+                transition: 0.3s all;
+
+            }
+        }
+
+
+    }
+}

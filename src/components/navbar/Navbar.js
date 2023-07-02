@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import styles from "./Navbar.module.scss";
 
-export const Navbar = () => {
-  return (
-      <div className={styles['navbar']}>navbar</div>
-  )
-}
+const Navbar = () => {
+  return <div className={styles["navbar"]}>OES - Akdeniz University</div>;
+};
+
+export default Navbar;

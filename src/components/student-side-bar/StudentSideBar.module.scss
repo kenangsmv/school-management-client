@@ -1,0 +1,42 @@
+.student-sidebar {
+    padding: 2em 1em;
+
+    .logo {
+        width: 100px;
+
+    }
+
+    .student-side-bar-menu {
+        padding: 0 1em;
+        list-style: none;
+
+        li {
+            margin: 2em 0;
+            padding: 20px 0;
+            background-color: #F1F9F6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            transition: 0.3s all;
+
+
+            .menu-items {
+                font-size: 23px;
+                color: #7FA30A;
+            }
+        }
+
+        li:hover {
+            background: #7FA30A;
+            transition: 0.3s all;
+            cursor: pointer;
+
+            .menu-items {
+                color: white;
+            }
+        }
+
+
+    }
+}

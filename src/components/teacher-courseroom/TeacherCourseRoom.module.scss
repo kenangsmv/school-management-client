@@ -1,0 +1,27 @@
+.course-room {
+    width: 85%;
+    background: #F1F9F6;
+    padding: 2em;
+
+    button {
+        border: none;
+        outline: none;
+        font-size: 20px;
+        padding: 20px 0;
+        text-align: center;
+        margin-right: 3em;
+        color: white;
+        border-radius: 15px;
+        background: #7FA30A;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 12%;
+        transition: 0.3s all;
+
+    }
+
+    button:hover {
+        scale: 0.95;
+        cursor: pointer;
+        transition: 0.3s all;
+    }
+}
