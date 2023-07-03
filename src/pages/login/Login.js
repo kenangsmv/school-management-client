@@ -3,6 +3,7 @@ import styles from "./Login.module.scss";
 import Navbar from "../../components/navbar/Navbar";
 import api from "../../api";
 import { useNavigate } from "react-router-dom";
+import SVG from "../../components/svgs/SVG";
 
 const Login = () => {
   const [login, setLogin] = useState("");
@@ -53,7 +54,7 @@ const Login = () => {
           // Store the token in local storage (or another secure place)
           localStorage.setItem("studentToken", token);
           console.log("Student logged in successfully:", response.data.message);
-          navigate("/student/genel-bilgiler/courses");
+          navigate(`/student/genel-bilgiler/courses/${token?._id}`);
         }
       } catch (error) {
         console.error("Failed to log in:", error);
@@ -74,7 +75,11 @@ const Login = () => {
         if (token) {
           // Store the token in local storage (or another secure place)
           localStorage.setItem(`${keyword}Token`, token);
-          navigate(`/${keyword}`);
+          if (keyword === "admin") {
+            navigate(`/${keyword}/database`);
+          } else {
+            navigate(`/${keyword}`);
+          }
           console.log("logged in successfully:", response.data.message);
         }
       } catch (error) {
@@ -108,6 +113,7 @@ const Login = () => {
           Login{" "}
         </button>
       </form>
+      <SVG></SVG>
     </div>
   );
 };

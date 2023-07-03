@@ -74,11 +74,28 @@ const StudentInfo = () => {
     setDates(datesArray);
   }, []);
 
+  const [currentStudent, setCurrentStudent] = useState(null);
+
+  useEffect(() => {
+    const savedStudent = JSON.parse(localStorage.getItem("student"));
+
+    if (savedStudent) {
+      setCurrentStudent(savedStudent);
+    } else {
+    }
+  }, [localStorage.getItem("student")]);
+
+  useEffect(() => {
+    console.log("curre", currentStudent);
+  }, [currentStudent]);
+
   return (
     <div className={styles["student-dashboard-container"]}>
       <div className={styles["dashboard-main"]}>
         {" "}
-        <DashboardHeader></DashboardHeader>
+        <DashboardHeader
+          user={currentStudent?.studentProfile}
+        ></DashboardHeader>
         <div className={styles["dashboard-context"]}>
           <div
             className={styles["news"]}
@@ -96,21 +113,35 @@ const StudentInfo = () => {
             <button className={styles["read-more"]}>Read More</button>
           </div>
           <ul className={styles["student-dashboard-actions"]}>
-            <li onClick={() => navigate("/student/genel-bilgiler/courses")}>
+            <li
+              onClick={() =>
+                navigate(`/student/genel-bilgiler/courses/${student?.id}`)
+              }
+            >
               Courses
             </li>
-            <li onClick={() => navigate("/student/genel-bilgiler/exams")}>
+            <li
+              onClick={() =>
+                navigate(`/student/genel-bilgiler/exams/${student?.id}`)
+              }
+            >
               Exams
             </li>
-            <li onClick={() => navigate("/student/genel-bilgiler/grades")}>
+            <li
+              onClick={() =>
+                navigate(`/student/genel-bilgiler/grades/${student?.id}`)
+              }
+            >
               Exams Results
             </li>
             <li
               onClick={() =>
-                navigate("/student/genel-bilgiler/course-selection")
+                navigate(
+                  `/student/genel-bilgiler/course-selection/${student?.id}`
+                )
               }
             >
-              Enrolment
+              Course Selection
             </li>
           </ul>
           <Outlet></Outlet>
@@ -119,8 +150,8 @@ const StudentInfo = () => {
       <div className={styles["student-dashboard-info"]}>
         <div className={styles["profile"]}>
           <img src={userImg} />
-          <h4>Kanan Gasimov</h4>
-          <span>STU36587D</span>
+          <h4>{currentStudent?.studentProfile?.name}</h4>
+          <span>{currentStudent?.studentProfile?.studentId}</span>
         </div>
         <div className={styles["dashboard-calendar"]}>
           {dates.map((date, index) => (

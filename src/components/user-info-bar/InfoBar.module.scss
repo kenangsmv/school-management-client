@@ -58,21 +58,29 @@
             .age {
                 background: #FFF0E0;
                 color: orangered;
+                position: relative;
+                overflow: hidden;
             }
 
             .gender {
                 background: #EBE3FF;
                 color: purple;
+                position: relative;
+                overflow: hidden;
             }
 
             .date-of-birth {
                 background: #E5F3FF;
                 color: #0074D9;
+                position: relative;
+                overflow: hidden;
             }
 
             .address {
                 background: #F1F9F6;
                 color: green;
+                position: relative;
+                overflow: hidden;
             }
 
             .age,
@@ -92,6 +100,13 @@
         }
     }
 
+    .create-background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+    }
 
 
 }

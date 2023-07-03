@@ -32,10 +32,7 @@ const Teacher = () => {
     fetchProfile();
   }, []);
 
-  const teacherActions = [
-    { id: "create-exam", title: "Create Exam" },
-    { id: "teacher-dashboard", title: "Dashboard" },
-  ];
+  const teacherActions = [{ id: "teacher-dashboard", title: "Dashboard" }];
   return (
     <div className={styles["teacher-page"]}>
       <Sidebar
