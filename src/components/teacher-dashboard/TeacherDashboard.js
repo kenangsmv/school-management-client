@@ -51,7 +51,9 @@ const TeacherDashboard = () => {
               src={courseImg}
               className={styles["course-img"]}
               onClick={() =>
-                navigate(`/teacher/${currentTeacher.name}/${subject.name}`)
+                navigate(
+                  `/teacher/${currentTeacher._id}/${subject._id}?course=${subject.name}`
+                )
               }
             />
             <h4>{subject?.name} </h4>

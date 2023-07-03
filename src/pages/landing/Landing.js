@@ -3,6 +3,7 @@ import Navbar from "../../components/navbar/Navbar";
 import styles from "./Landing.module.scss";
 
 import { useNavigate } from "react-router-dom";
+import SVG from "../../components/svgs/SVG";
 
 const Landing = () => {
   const [deneme, setDeneme] = useState("");
@@ -27,6 +28,7 @@ const Landing = () => {
           Admin girisi
         </li>
       </ul>
+      <SVG></SVG>
     </div>
   );
 };

@@ -2,6 +2,7 @@
     width: 85%;
     background: #F1F9F6;
     padding: 2em;
+    position: relative;
 
     button {
         border: none;
@@ -23,5 +24,144 @@
         scale: 0.95;
         cursor: pointer;
         transition: 0.3s all;
+    }
+
+    .create-exam {
+        position: relative;
+    }
+}
+
+form {
+    align-items: center;
+    border-radius: 10px;
+    width: 100%;
+
+    .selection {
+        display: flex;
+        flex-direction: column;
+
+
+        select {
+            border: none;
+            outline: none;
+            background: #DDDDDD;
+            border-radius: 10px;
+            height: 45px;
+            width: 100%;
+            padding: 0 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+
+    label {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        span {
+            padding-bottom: 4px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background: #DDDDDD;
+            border-radius: 10px;
+            height: 45px;
+            width: 100%;
+            padding: 0 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+
+    .create-button {
+        border: none;
+        outline: none;
+        font-size: 1.5em;
+        color: white;
+        background: #3D9970;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 1em;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+    }
+
+    .add-question-button {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+    }
+}
+
+.exam-form {
+    position: absolute;
+    width: 30%;
+    left: 2%;
+    background: white;
+    top: 12%;
+
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+    padding: 0;
+    overflow: hidden;
+    transition: 0.3s all;
+
+}
+
+.exam-form-active {
+    height: auto;
+    padding: 1em;
+    transition: 0.3s all;
+    z-index: 99;
+
+
+}
+
+.exam-form-not-active {
+    height: 0;
+    padding: 0;
+    transition: 0.3s all;
+
+}
+
+.question-adding {
+    position: absolute;
+    top: 18%;
+    left: 2%;
+    width: 96%;
+    height: 82%;
+    overflow-y: scroll;
+    padding: 1em;
+}
+
+.question-adding::-webkit-scrollbar {
+    width: 0px;
+}
+
+.meeting-creation {
+    position: absolute;
+    z-index: 9999;
+    left: 17%;
+    top: 3%;
+    width: 100%;
+}
+
+.meeting-form {
+    z-index: 9999;
+
+
+    input {
+        padding: 10px;
+        border: none;
+        outline: none;
+        margin-right: 1em;
+    }
+
+    button {
+        margin: 0;
     }
 }

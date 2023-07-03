@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import styles from "./CreateExam.module.scss";
 import api from "../../api";
 import QuestionCreation from "../question-creation-form/QuestionCreation";
+import { useNavigate, useParams } from "react-router-dom";
 
 const CreateExam = ({ id }) => {
   const [subjects, setSubjects] = useState([]);
+  const { teacherID } = useParams();
 
   const [isExamFormActive, setIsExamFormActive] = useState(null);
   const [isQuestionFormActive, setIsQuestionFormActive] = useState(false);
@@ -51,7 +53,7 @@ const CreateExam = ({ id }) => {
         );
 
         let matchingSubjects = response.data.data.filter(
-          (subject) => subject.teacher === id
+          (subject) => subject.teacher === teacherID
         );
         setSubjects(matchingSubjects);
       } catch (error) {
@@ -100,84 +102,7 @@ const CreateExam = ({ id }) => {
 
   return (
     <div className={styles["create-exam"]}>
-      <div className={styles["course-box-grid"]}>
-        {subjects?.map((item) => (
-          <div key={item._id} className={styles["course-box"]}>
-            {item.name}
-            <button
-              className={styles["create-exam"]}
-              onClick={() => {
-                openForm(item._id);
-              }}
-            >
-              Create Exam
-            </button>
-
-            {isExamFormActive === item._id && (
-              <div
-                className={`${styles["exam-form"]} ${
-                  isExamFormActive === item._id
-                    ? styles["exam-form-active"]
-                    : ""
-                }`}
-              >
-                <form onSubmit={createExam}>
-                  Exam Form a
-                  <label>
-                    <input
-                      type="text"
-                      value={examName}
-                      onChange={handleExamnameChange}
-                      placeholder="Exam Name"
-                      required
-                    />
-                  </label>
-                  <label>
-                    <input
-                      type="text"
-                      value={item._id}
-                      // onChange={handleUsernameChange}
-                      readOnly
-                    />
-                  </label>
-                  <div className={styles["selection"]}>
-                    <label>
-                      <select
-                        value={duration}
-                        onChange={handleDurationChange}
-                        required
-                      >
-                        <option value="">Duration</option>
-                        <option value="30">30</option>
-                        <option value="40">40</option>
-                        <option value="60">60</option>
-                        <option value="80">80</option>
-                      </select>
-                    </label>
-                  </div>
-                  <label>
-                    <input
-                      type="date"
-                      value={date}
-                      onChange={handleDateChange}
-                    />
-                  </label>
-                  <label>
-                    <input
-                      type="time"
-                      value={dateTime}
-                      onChange={handleDateTimeChange}
-                    />
-                  </label>
-                  <button type="submit" className={styles["create-button"]}>
-                    Create
-                  </button>
-                </form>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+      sdfsdf
       {exam && (
         <div>
           {exam.title}{" "}

@@ -1,6 +1,5 @@
 .exams {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
     .exam {
@@ -9,7 +8,7 @@
         padding: 1em;
         background: #FFFFFF;
         border-radius: 10px;
-        margin: 15px 0;
+        margin: 15px;
         border: 1px solid #D1E49C;
 
         .join-exam {
@@ -44,7 +43,8 @@
 
         .exam-content {
             display: flex;
-            align-items: center;
+            align-items: start;
+            flex-direction: column;
             justify-content: space-between;
 
             p {
@@ -78,4 +78,18 @@
             }
         }
     }
+}
+
+.exam-join-button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    background: #005C53;
+    color: white;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
 }

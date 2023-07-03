@@ -31,7 +31,7 @@ function App() {
           <Route path="/admin/database" element={<Database></Database>} />
         </Route>
         <Route path="/teacher/*" element={<Teacher />}>
-          <Route path="create-exam/:id" element={<CreateExam />} />
+          <Route path="course/exam/:courseID" element={<CreateExam />} />
           <Route
             path="teacher-dashboard/:teacherID"
             element={<TeacherDashboard />}
@@ -42,19 +42,25 @@ function App() {
         <Route path="/course/meet/:meetID" element={<Meet></Meet>} />
 
         <Route path="/student" element={<Student></Student>}>
+          <Route path="/student/exams/:examID" element={<ExamRoom />} />
+
           <Route path="/student/genel-bilgiler" element={<Dashboard />}>
             <Route
-              path="/student/genel-bilgiler/courses"
+              path="/student/genel-bilgiler/courses/:studentID"
               element={<Courses />}
             />
 
-            <Route path="/student/genel-bilgiler/exams" element={<Exams />} />
             <Route
-              path="/student/genel-bilgiler/grades"
+              path="/student/genel-bilgiler/exams/:studentID"
+              element={<Exams />}
+            />
+
+            <Route
+              path="/student/genel-bilgiler/grades/:studentID"
               element={<ExamResults />}
             />
             <Route
-              path="/student/genel-bilgiler/course-selection"
+              path="/student/genel-bilgiler/course-selection/:studentID"
               element={<CourseSelection />}
             />
           </Route>

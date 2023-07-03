@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./QuestionCreation.module.scss";
+import { useNavigate, useParams } from "react-router-dom";
 import api from "../../api";
 
 const QuestionCreation = ({ examId, id }) => {
   const [questions, setQuestions] = useState([]);
+  const navigate = useNavigate();
+  const { teacherID } = useParams();
 
   const addQuestion = (event) => {
     event.preventDefault();
@@ -106,8 +109,9 @@ const QuestionCreation = ({ examId, id }) => {
           },
         }
       );
+      alert("Question added successfully");
     } catch (error) {
-      console.error("Failed to fetch subjects:", error);
+      console.error("Failed to add qustion:", error);
     }
   };
 
@@ -165,6 +169,12 @@ const QuestionCreation = ({ examId, id }) => {
         className={styles["add-question-button"]}
       >
         +
+      </button>
+      <button
+        className={styles["add-question-button"]}
+        onClick={() => navigate(`/teacher/teacher-dashboard/${teacherID}`)}
+      >
+        Share Exam
       </button>
     </div>
   );

@@ -1,6 +1,5 @@
 .courses {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
     .course {
@@ -8,8 +7,9 @@
         padding: 1em;
         background: #FFFFFF;
         border-radius: 10px;
-        margin: 15px 0;
+        margin: 15px;
         border: 1px solid #D1E49C;
+        cursor: pointer;
 
         h4 {
             padding: 10px 0;
