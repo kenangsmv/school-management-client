@@ -52,9 +52,9 @@ const Register = () => {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/${role}/admin/register`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/${role}/admin/register`,
         {
-          name: name + surname,
+          name: name + " " + surname,
           email,
           password,
           role,

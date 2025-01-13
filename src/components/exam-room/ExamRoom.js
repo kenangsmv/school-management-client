@@ -17,7 +17,7 @@ const ExamRoom = () => {
       try {
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          `http://localhost:2020/api/v1/exams/${examID}`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/exams/${examID}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const ExamRoom = () => {
     console.log(token);
     const response = await api
       .post(
-        `http://localhost:2020/api/v1/student/exam/${examID}/write`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/student/exam/${examID}/write`,
         { answers: requestAnswers },
         {
           headers: {

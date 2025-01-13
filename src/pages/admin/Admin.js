@@ -33,7 +33,7 @@ const Admin = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/admin/profile",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/admin/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,

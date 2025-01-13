@@ -56,7 +56,7 @@ const TeacherCourseRoom = () => {
     try {
       const token = localStorage.getItem("teacherToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/exams`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/exams`,
         {
           name: examName,
           subject,
@@ -88,7 +88,7 @@ const TeacherCourseRoom = () => {
     try {
       const token = localStorage.getItem("teacherToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/meets`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/meets`,
         {
           name: roomCode,
           // subject,

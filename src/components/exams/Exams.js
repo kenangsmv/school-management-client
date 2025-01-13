@@ -22,7 +22,7 @@ const Exams = () => {
         const student = localStorage.getItem("student");
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          `http://localhost:2020/api/v1/exam-results/${1213132456}/checking`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/exam-results/${1213132456}/checking`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -42,7 +42,7 @@ const Exams = () => {
       try {
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/student/profile",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/student/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ const Exams = () => {
     const fetchCourses = async () => {
       try {
         const response = await api.get(
-          "http://localhost:2020/api/v1/subjects",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects",
           {}
         );
         // response.data.data.students.map((item) => {
@@ -78,7 +78,7 @@ const Exams = () => {
     const fetchExams = async () => {
       try {
         const response = await api.get(
-          "http://localhost:2020/api/v1/exams",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/exams",
           {}
         );
         // response.data.data.students.map((item) => {
@@ -100,7 +100,7 @@ const Exams = () => {
         const student = localStorage.getItem("student");
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          `http://localhost:2020/api/v1/exam-results/${1213132456}/checking`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/exam-results/${1213132456}/checking`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

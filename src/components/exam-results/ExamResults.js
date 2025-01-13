@@ -12,7 +12,7 @@ const ExamResults = () => {
         const student = localStorage.getItem("student");
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          `http://localhost:2020/api/v1/exam-results/${1213132456}/checking`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/exam-results/${1213132456}/checking`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

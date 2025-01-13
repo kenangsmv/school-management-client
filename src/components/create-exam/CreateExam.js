@@ -44,7 +44,7 @@ const CreateExam = ({ id }) => {
       try {
         const token = localStorage.getItem("teacherToken");
         const response = await api.get(
-          `http://localhost:2020/api/v1/subjects`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ const CreateExam = ({ id }) => {
     try {
       const token = localStorage.getItem("teacherToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/exams`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/exams`,
         {
           name: examName,
           subject,

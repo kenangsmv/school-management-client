@@ -32,7 +32,7 @@ const Create = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/programs",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/programs",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ const Create = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/academic-terms",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/academic-terms",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -72,7 +72,7 @@ const Create = () => {
       try {
         const token = localStorage.getItem("adminToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/teacher/admin",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/teacher/admin",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ const Create = () => {
     try {
       const token = localStorage.getItem("adminToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/subjects/${program}`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects/${program}`,
         {
           name: courseName,
           teacher,

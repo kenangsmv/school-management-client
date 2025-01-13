@@ -23,7 +23,7 @@ const StudentInfo = () => {
       try {
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/student/profile",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/student/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,

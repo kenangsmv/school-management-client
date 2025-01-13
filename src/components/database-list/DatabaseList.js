@@ -21,7 +21,7 @@ const DatabaseList = () => {
         const token = localStorage.getItem("adminToken");
 
         const response = await api.get(
-          "http://localhost:2020/api/v1/student/admin",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/student/admin",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ const DatabaseList = () => {
         const token = localStorage.getItem("adminToken");
 
         const response = await api.get(
-          "http://localhost:2020/api/v1/teacher/admin",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/teacher/admin",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -67,8 +67,6 @@ const DatabaseList = () => {
 
   const chooseStudent = (student) => {
     setInfoBar(student);
-
-    console.log("th clicked", student);
   };
 
   const deleteStudent = async (id, role) => {
@@ -76,7 +74,7 @@ const DatabaseList = () => {
       const token = localStorage.getItem("adminToken");
 
       const response = await api.delete(
-        `http://localhost:2020/api/v1/${role}/${id}`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/${role}/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -142,7 +140,11 @@ const DatabaseList = () => {
           </table>
         </div>
       </div>
-      <InfoBar user={info} roleId={list}></InfoBar>
+      {info ? (
+        <InfoBar user={info} roleId={list}></InfoBar>
+      ) : (
+        <InfoBar user={relatedList[0]} roleId={list}></InfoBar>
+      )}
     </div>
   );
 };

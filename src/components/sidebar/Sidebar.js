@@ -14,10 +14,18 @@ const Sidebar = ({ title, actions, code, role, id }) => {
     }
   };
 
+  const handleLogoClick = () => {
+    if (role === "admin") {
+      navigate(`/admin/database`);
+    } else {
+      navigate(`/${role}`);
+    }
+  };
+
   return (
     <div className={styles["sidebar"]}>
       <div className={styles["side-nav"]}>
-        <div className={styles["logo"]}>
+        <div className={styles["logo"]} onClick={handleLogoClick}>
           <img src={logo} />
         </div>
         <div className={styles["nav-menu"]}>

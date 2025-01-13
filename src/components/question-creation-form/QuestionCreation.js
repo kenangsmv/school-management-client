@@ -93,7 +93,7 @@ const QuestionCreation = ({ examId, id }) => {
     try {
       const token = localStorage.getItem("teacherToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/questions/${examId}`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/questions/${examId}`,
         {
           question: questions[qIndex].question,
           exam: examId,

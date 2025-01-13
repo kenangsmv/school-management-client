@@ -12,7 +12,7 @@ const Courses = () => {
 
   useEffect(() => {
     // Fetch subjects from your API
-    fetch("http://localhost:2020/api/v1/subjects")
+    fetch("https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects")
       .then((response) => response.json())
       .then((data) => {
         const studentSubject = data.data.filter((subj) => {

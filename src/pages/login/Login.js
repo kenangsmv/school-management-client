@@ -42,7 +42,7 @@ const Login = () => {
     if (keyword === "student") {
       try {
         const response = await api.post(
-          "http://localhost:2020/api/v1/student/login",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/student/login",
           {
             studentId: login,
             password,
@@ -62,15 +62,18 @@ const Login = () => {
     }
 
     if (keyword === "admin" || keyword === "teacher") {
+      console.log("login admin");
+      
       try {
         const response = await api.post(
-          `http://localhost:2020/api/v1/${keyword}/login`,
+          `https://school-management-system-backend-dy1k.onrender.com/api/v1/${keyword}/login`,
           {
             email: login,
             password,
           }
         );
         const token = response.data.data;
+        console.log("token", token);
 
         if (token) {
           // Store the token in local storage (or another secure place)

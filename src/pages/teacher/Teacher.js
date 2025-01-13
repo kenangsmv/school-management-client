@@ -14,7 +14,7 @@ const Teacher = () => {
           // Check if teacher is null
           const token = localStorage.getItem("teacherToken");
           const response = await api.get(
-            "http://localhost:2020/api/v1/teacher/profile",
+            "https://school-management-system-backend-dy1k.onrender.com/api/v1/teacher/profile",
             {
               headers: {
                 Authorization: `Bearer ${token}`,

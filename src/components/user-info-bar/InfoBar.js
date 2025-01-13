@@ -6,20 +6,16 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
 
 const InfoBar = ({ user, roleId }) => {
-  console.log(user);
-
-  console.log(roleId);
   return (
     <div className={styles["infobar-container"]}>
-      <UserBar></UserBar>
       <div className={styles["infobar"]}>
         <div className={styles["user-info"]}>
+  
+          <img src={userImg} className={styles["info-bar-img"]} />
+          <h2>{user?.name}</h2>
           <span>
             {roleId === "student" ? user?.studentId : user?.teacherId}
           </span>
-          <img src={userImg} className={styles["info-bar-img"]} />
-          <h2>{user?.name}</h2>
-          <span>Science 4 Student</span>
         </div>
         <div className={styles["user-action"]}>
           <button>

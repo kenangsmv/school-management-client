@@ -17,7 +17,7 @@ const CourseSelection = () => {
       try {
         const token = localStorage.getItem("studentToken");
         const response = await api.get(
-          "http://localhost:2020/api/v1/student/profile",
+          "https://school-management-system-backend-dy1k.onrender.com/api/v1/student/profile",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const CourseSelection = () => {
 
   useEffect(() => {
     // Fetch subjects from your API
-    fetch("http://localhost:2020/api/v1/subjects")
+    fetch("https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects")
       .then((response) => response.json())
       .then((data) => {
         const studentSubject = data.data.filter((subj) => {
@@ -60,7 +60,7 @@ const CourseSelection = () => {
     try {
       const token = localStorage.getItem("studentToken");
       const response = await api.post(
-        `http://localhost:2020/api/v1/subjects/${item._id}/student`,
+        `https://school-management-system-backend-dy1k.onrender.com/api/v1/subjects/${item._id}/student`,
         {
           name: studentName,
         },
